@@ -1,0 +1,115 @@
+/* quiz.css */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 48px auto;
+  background: #fff;
+  padding: 32px 28px 28px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  transition: box-shadow 0.2s;
+}
+
+h1 {
+  text-align: center;
+  color: #2d3a4b;
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+.question {
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.question:last-child {
+  border-bottom: none;
+}
+
+.question > div:first-child {
+  font-weight: 500;
+  color: #3a4a5d;
+  margin-bottom: 10px;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  border: 1px solid transparent;
+}
+
+.options input[type="radio"] {
+  accent-color: #007bff;
+  margin-right: 10px;
+}
+
+.options label:hover,
+.options input[type="radio"]:focus + label {
+  background: #f0f6ff;
+}
+
+.options input[type="radio"]:checked + label {
+  background: #e6f0fa;
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 32px;
+}
+
+button {
+  padding: 12px 32px;
+  font-size: 17px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin: 0 8px;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:disabled {
+  background: #b0b8c1;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #0056b3 0%, #0093c4 100%);
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+}
+
+.result {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 32px;
+  color: #2d3a4b;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 18px 6vw 18px 6vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 15px;
+    padding: 10px 18px;
+  }
+}
